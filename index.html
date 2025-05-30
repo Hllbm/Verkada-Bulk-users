@@ -1,3 +1,17 @@
+const options = {
+  method: 'POST',
+  headers: {
+    accept: 'application/json',
+    'content-type': 'application/json',
+    'x-verkada-auth': 'YzE3OTA4YTYtMDQ0Yi00ODY2LWFhZTQtOTBlZmVhMjJkYTE3fGY1NzE0NmEyLWM0NmMtNGJjYS04MjMzLWVjNTQyYmM0OTZiNQ=='
+  },
+  body: JSON.stringify({first_name: 'User230000', last_name: 'User230000'})
+};
+
+fetch('https://api.eu.verkada.com/core/v1/user', options)
+  .then(res => res.json())
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
 <html>
-  Hello world
+
 </html>
