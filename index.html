@@ -1,11 +1,15 @@
-curl --request POST \
-     --url https://api.eu.verkada.com/core/v1/user \
-     --header 'accept: application/json' \
-     --header 'content-type: application/json' \
-     --header 'x-verkada-auth: v2_161e9587af9f7cdfe020aa9d813a7d21' \
-     --data '
-{
-  "first_name": "User230003",
-  "last_name": "User230003"
-}
-'
+<script>const options = {
+  method: 'POST',
+  headers: {
+    accept: 'application/json',
+    'content-type': 'application/json',
+    'x-verkada-auth': 'v2_2f15dc1f17372d80a830c817d9697161'
+  },
+  body: JSON.stringify({first_name: 'user230005', last_name: 'user230005'})
+};
+
+fetch('https://api.eu.verkada.com/core/v1/user', options)
+  .then(res => res.json())
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+  </script>
